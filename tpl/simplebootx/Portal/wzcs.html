@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$post_title} {$site_name} </title>
+		<meta name="keywords" content="{$post_keywords}" />
+		<meta name="description" content="{$post_excerpt}">
+		<tc_include file="Public:head" />
+		<style>
+			#article_content img{height:auto !important}
+			#article_content {word-wrap: break-word;}
+    		.btn {margin-top: 33px;}
+		</style>
+	</head>
+<body class="">
+<tc_include file="Public:nav" />
+<div class="container tc-main">
+	<div class="row">
+		<div class="span9">
+			
+			<div class="tc-box first-box article-box">
+		    	 
+		    	<div id="article_content">
+                    <!--网站超市-->
+
+                        <iframe src="http://site.vhostgo.com/webmall" style="margin-left: -105px;width:1190px;height:1840px;" frameborder="0" scrolling="no"></iframe>
+
+		    	</div>
+                <if condition="!empty($post_source)">
+                    <div>
+                        <b>注：本文转载自{$post_source}，转载目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。如有侵权行为，请联系我们，我们会及时删除。</b>
+                    </div>
+    			</if>
+
+		    </div>
+		    
+		    <php>$ad=sp_getad("portal_article_bottom");</php>
+			<if condition="!empty($ad)">
+        	<div class="tc-box">
+	        	<div class="headtitle">
+	        		<h2>赞助商</h2>
+	        	</div>
+	        	<div>
+		        	{$ad}
+		        </div>
+			</div>
+			</if>
+		    
+		</div>
+
+	</div>
+              
+<tc_include file="Public:footer"/>
+</div>
+
+<tc_include file="Public:scripts"/>
+</body>
+</html>

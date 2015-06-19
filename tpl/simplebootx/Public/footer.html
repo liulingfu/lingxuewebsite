@@ -1,0 +1,19 @@
+<br><br><br>
+<!-- Footer
+      ================================================== -->
+      <hr>
+{:hook('footer')}
+      <div id="footer">
+        <div class="links">
+        <php>$links=sp_getlinks();</php>
+        <foreach name="links" item="vo">
+          <a href="{$vo.link_url}" target="{$vo.link_target}">{$vo.link_name}</a>
+        </foreach>
+        </div>
+        <p>
+        联系我们: Tel:13293067665 QQ:642161679 官方QQ群：凌雪软件 146710047 <br/>
+        </p>
+      </div>
+      <div id="backtotop"><i class="fa fa-arrow-circle-up"></i></div>
+
+      {$site_tongji}
